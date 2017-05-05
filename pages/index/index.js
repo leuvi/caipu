@@ -5,7 +5,9 @@ Page({
   data: {
     motto: 0,
     userInfo: {},
-    text: ''
+    loading: false,
+    searchtext: '搜索',
+    posttext: ''
   },
   //事件处理函数
   bindViewTap: function () {
@@ -30,12 +32,22 @@ Page({
     })
     wx.stopPullDownRefresh()
   },
-  onReachBottom() {
-    console.log('上拉加载')
-  },
   inputhandler(e) {
     this.setData({
-      text: e.detail.value
+      posttext: e.detail.value
     })
+  },
+  postsearch() {
+    if(!this.data.posttext) {
+      console.log(1)
+      wx.showModal({
+        content: '菜谱名不能为空',
+        showCancel: false
+      })
+    } else {
+      wx.navigateTo({
+        url: '../list/list?keyword=' + this.data.posttext
+      })
+    }
   }
 })

@@ -16,13 +16,13 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
-}
-progress {
+.seachbox {
   width: 100%;
 }
-.inputtext input {
-  border: 1px solid #eee;
-  font-size: 12px;
+.seachbox input {
+  border: 1px solid #ddd;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
 }

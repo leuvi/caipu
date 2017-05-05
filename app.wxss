@@ -5,6 +5,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 200rpx 30rpx;
   box-sizing: border-box;
 } 
+
+.basecolor {
+  color: #f60;
+}
+
+button.btn {
+  background: #f60;
+  color: #fff;
+}

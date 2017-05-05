@@ -1,0 +1,4 @@
+<!--list.wxml-->
+<view class="container">
+  <text>{{keyword}}</text>
+</view>
