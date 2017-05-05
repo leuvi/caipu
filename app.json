@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#f60",
+    "navigationBarTitleText": "小熊菜谱",
+    "navigationBarTextStyle":"#fff",
+    "backgroundColor": "#eee",
+    "enablePullDownRefresh": true
+  }
+}
