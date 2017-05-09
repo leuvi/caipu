@@ -1,4 +1,21 @@
 <!--list.wxml-->
-<view class="container">
-  <text>{{keyword}}</text>
+<view class="listwrap">
+  <view wx:if="{{item.length > 0}}" class="lists">
+    <block wx:for="{{item}}" wx:for-item="value" wx:for-index="idx" wx:key="*this">
+      <view class="item" bindtap="toinfo" data-id="{{value.id}}">
+        <view class="pic">
+          <image src="{{value.pic}}" mode="aspectFill"></image>
+        </view>
+        <view class="des">
+          <view class="h1">
+            <text>{{value.name}}</text>
+          </view>
+          <view class="p">
+            <text>{{value.tag}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else>{{msg}}</view>
 </view>

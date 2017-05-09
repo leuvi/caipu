@@ -1,0 +1,33 @@
+<!--detail.wxml-->
+<view class="detailwrap">
+  <view wx:if="{{res !== ''}}">
+    <view class="banner">
+      <image src="{{res.pic}}"></image>
+    </view>
+    <view class="layout des">
+      <view class="name"><text>{{res.name}}</text></view>
+      <view class="preparetime"><text>{{res.preparetime}}</text></view>
+      <view class="cookingtime"><text>{{res.cookingtime}}</text></view>
+      <view class="cookingtime"><text>{{res.cookingtime}}</text></view>
+      <view class="peoplenum"><text>{{res.peoplenum}}</text></view>
+    </view>
+    <view class="layout content">
+      <text>{{res.content}}</text>
+    </view>
+    <view class="layout material">
+      <view class="h2"><text>用料</text></view>
+      <view wx:for="{{res.material}}" wx:for-index="idx" wx:for-item="value" wx:key="*this">
+        <text>{{value.mname}}: {{value.amount}}</text>
+      </view>
+    </view>
+    <view class="layout process">
+      <view class="h2"><text>做法</text></view>
+      <view wx:for="{{res.process}}" wx:for-index="idx" wx:for-item="value" wx:key="*this">
+        <text>{{idx}}</text>
+        <image src="{{value.pic}}"></image>
+        <text>{{value.pcontent}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else>{{msg}}</view>
+</view>

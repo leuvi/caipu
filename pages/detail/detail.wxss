@@ -1,0 +1,29 @@
+.detailwrap {
+  background-color: #ededed;
+}
+.banner image {
+  width: 100%;
+}
+.layout {
+  background-color: #fff;
+  padding: 30rpx;
+}
+.des {
+  text-align: center;
+}
+.des .name {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.content {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+.material {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+.process {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}

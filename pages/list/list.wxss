@@ -1,0 +1,42 @@
+.listwrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+} 
+
+.lists {
+  width: 100%;
+}
+
+.lists .item {
+  height: 200rpx;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.lists .pic {
+  flex-basis: 240rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lists .pic image {
+  width: 240rpx;
+  height: 200rpx;
+}
+.lists .des {
+  flex-shrink: 1;
+  padding-left: 30rpx;
+}
+.lists .des .h1 {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.lists .des .p {
+  font-size: 24rpx;
+  margin-top: 24rpx;
+  color: #999;
+  line-height: 40rpx;
+}
