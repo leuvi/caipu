@@ -2,15 +2,14 @@
   "pages":[
     "pages/index/index",
     "pages/list/list",
-    "pages/detail/detail",
-    "pages/logs/logs"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#f60",
     "navigationBarTitleText": "小熊菜谱",
     "navigationBarTextStyle":"#fff",
-    "backgroundColor": "#eee",
-    "enablePullDownRefresh": true
+    "backgroundColor": "#ededed",
+    "enablePullDownRefresh": false
   }
 }

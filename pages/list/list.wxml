@@ -17,5 +17,5 @@
       </view>
     </block>
   </view>
-  <view wx:else>{{msg}}</view>
+  <view wx:else class="loading">{{msg}}</view>
 </view>

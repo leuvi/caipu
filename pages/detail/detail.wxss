@@ -1,5 +1,5 @@
-.detailwrap {
-  background-color: #ededed;
+.banner {
+  background-color: #fff;
 }
 .banner image {
   width: 100%;
@@ -8,22 +8,56 @@
   background-color: #fff;
   padding: 30rpx;
 }
-.des {
-  text-align: center;
-}
 .des .name {
   font-size: 32rpx;
   font-weight: 700;
 }
+.cookingtime, .preparetime, .peoplenum {
+  margin-top: 24rpx;
+  font-size: 28rpx;
+}
+.layout .h2 {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-weight: 700;
+  height: 64rpx;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 20rpx;
+}
 .content {
   margin-top: 20rpx;
-  font-size: 24rpx;
+}
+.content .p {
+  font-size: 28rpx;
+  line-height: 52rpx;
 }
 .material {
   margin-top: 20rpx;
-  font-size: 24rpx;
+  font-size: 28rpx;
+}
+.mrow {
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.mrow .ml {
+  flex-grow: 1;
+}
+.mrow .mr {
+  flex-grow: 1;
+  text-align: right;
 }
 .process {
   margin-top: 20rpx;
-  font-size: 24rpx;
+  font-size: 28rpx;
+}
+.process image {
+  width: 100%;
+}
+.process .pic {
+  margin-bottom: 24rpx;
+}
+.process .step {
+  margin-bottom: 24rpx;
 }

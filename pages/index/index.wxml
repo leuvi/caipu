@@ -1,11 +1,23 @@
 <!--index.wxml-->
-<view class="container">
-  <view bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="home">
+  <view class="recommend" bindtap="torecommend" data-id="{{recommend.id}}">
+    <block wx:if="{{recommend != ''}}">
+      <view class="pic"><image src="{{recommend.pic}}" mode="aspectFill"></image></view>
+      <view class="txt">推荐：{{recommend.name}}</view>
+    </block>
+    <text wx:else>正在加载数据...</text>
   </view>
   <view class="seachbox">
     <input placeholder="请输入菜名.." bindinput="inputhandler" /> 
     <button class="btn" loading="{{loading}}" bindtap="postsearch">{{searchtext}}</button>
+  </view>
+  <view class="hot">
+    <view class="h2"><text>{{hot.title}}</text></view>
+    <view class="catebox">
+      <view class="cate" wx:for="{{hot.list}}" wx:for-item="value" wx:key="*this" bindtap="tohot" data-id="{{value.id}}">
+        <view class="pic"><image src="{{value.pic}}" mode="widthFix"></image></view>
+        <view class="txt"><text>{{value.name}}</text></view>
+      </view>
+    </view>
   </view>
 </view>

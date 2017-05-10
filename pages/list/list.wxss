@@ -7,11 +7,12 @@
 
 .lists {
   width: 100%;
+  background-color: #fff;
 }
 
 .lists .item {
   height: 200rpx;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ededed;
   overflow: hidden;
   padding: 30rpx;
   display: flex;

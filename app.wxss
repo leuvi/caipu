@@ -1,13 +1,7 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 30rpx;
-  box-sizing: border-box;
-} 
+page {
+  background-color: #ededed;
+}
 
 .basecolor {
   color: #f60;
@@ -16,4 +10,9 @@
 button.btn {
   background: #f60;
   color: #fff;
+}
+
+.loading {
+  text-align: center;
+  padding-top: 300rpx;
 }

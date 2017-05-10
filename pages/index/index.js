@@ -6,21 +6,53 @@ var app = getApp()
 Page({
   data: {
     motto: 0,
-    userInfo: {},
+    recommend: '',
     loading: false,
-    searchtext: '搜索',
-    posttext: ''
+    searchtext: '找菜谱',
+    posttext: '',
+    hot: []
   },
   onLoad: function () {
-    var that = this
-    app.getUserInfo(function (userInfo) {
-      that.setData({
-        userInfo: userInfo
-      })
+    var self = this
+    wx.request({
+      url: api.detail,
+      data: {
+        id: ~~(Math.random() * 5000)
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        if (res.data.status == '0') {
+          self.setData({
+            recommend: res.data.result,
+          })
+        }
+      }
+    })
+    wx.request({
+      url: api.hot,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        self.setData({
+          hot: res.data,
+        })
+      }
     })
   },
-  onPullDownRefresh() {
-    wx.stopPullDownRefresh()
+  torecommend(event) {
+    wx.navigateTo({
+      url: '../detail/detail?id=' + event.currentTarget.dataset.id
+    })
+  },
+  tohot(event) {
+    wx.navigateTo({
+      url: '../detail/detail?id=' + event.currentTarget.dataset.id
+    })
   },
   inputhandler(e) {
     this.setData({
@@ -29,7 +61,6 @@ Page({
   },
   postsearch() {
     if(!this.data.posttext) {
-      console.log(1)
       wx.showModal({
         content: '菜谱名不能为空',
         showCancel: false
@@ -38,6 +69,18 @@ Page({
       wx.navigateTo({
         url: '../list/list?keyword=' + this.data.posttext
       })
+    }
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '小熊菜谱',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
     }
   }
 })
