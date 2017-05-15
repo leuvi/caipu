@@ -35,19 +35,32 @@
   padding-left: 30rpx;
 }
 
-.seachbox {
+.searchbox {
   width: 100%;
   box-sizing: border-box;
   padding: 0 30rpx;
   margin-top: 60rpx;
 }
-.seachbox input {
+.searcharea {
+  position: relative;
+}
+.clearicon {
+  position: absolute;
+  right: 20rpx;
+  top: 26rpx;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 2;
+}
+.searchbox input {
   border: 1px solid #ddd;
   background-color: #fff;
   padding: 20rpx;
   border-radius: 10rpx;
   font-size: 32rpx;
   margin-bottom: 30rpx;
+  position: relative;
+  z-index: 1;
 }
 
 .hot {
@@ -66,6 +79,7 @@
   margin-bottom: 30rpx;
   width: 48%;
   height: 420rpx;
+  border-radius: 10rpx;
 }
 .hot .cate:nth-child(2n + 1) {
   margin-left: 0;

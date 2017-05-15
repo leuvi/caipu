@@ -1,4 +1,5 @@
 var api = require('../../utils/api.js')
+var app = getApp()
 
 Page({
   data: {
@@ -6,13 +7,15 @@ Page({
     item: [],
     msg: '',
     start: 0,
-    loaded: false
+    loaded: false,
+    wheight: 0
   },
   onLoad: function (option) {
     var self = this
     self.setData({
       msg: '正在玩命加载..',
-      keyword: option.keyword
+      keyword: option.keyword,
+      wheight: app.globalData.config.windowHeight
     })
     wx.showNavigationBarLoading()
     wx.request({
@@ -62,14 +65,14 @@ Page({
     }
     self.setData({
       loaded: true,
-      start: self.data.start + 5
+      start: self.data.start + 20
     })
     console.log(self.data.start)
     wx.request({
       url: api.search,
       data: {
         keyword: self.data.keyword,
-        num: 5,
+        num: 20,
         start: self.data.start
       },
       header: {

@@ -1,8 +1,6 @@
 var api = require('../../utils/api.js')
-
-//index.js
-//获取应用实例
 var app = getApp()
+
 Page({
   data: {
     motto: 0,
@@ -57,6 +55,11 @@ Page({
   inputhandler(e) {
     this.setData({
       posttext: e.detail.value
+    })
+  },
+  clearinput() {
+    this.setData({
+      posttext: ''
     })
   },
   postsearch() {

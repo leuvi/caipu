@@ -3,7 +3,8 @@ var api = require('../../utils/api.js')
 Page({
   data: {
     res: '',
-    msg: ''
+    msg: '',
+    content: ''
   },
   onLoad: function (option) {
     var self = this
@@ -28,7 +29,8 @@ Page({
           })
           self.setData({
             res: res.data.result,
-            msg: ''
+            msg: '',
+            content: res.data.result.content.replace(/(<br \/>)+/g, '\n')
           })
         }
       }

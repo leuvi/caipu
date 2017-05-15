@@ -2,13 +2,16 @@
 <view class="home">
   <view class="recommend" bindtap="torecommend" data-id="{{recommend.id}}">
     <block wx:if="{{recommend != ''}}">
-      <view class="pic"><image src="{{recommend.pic}}" mode="aspectFill"></image></view>
+      <view class="pic"><image src="{{recommend.pic}}" mode="widthFix"></image></view>
       <view class="txt">推荐：{{recommend.name}}</view>
     </block>
     <text wx:else>正在加载数据...</text>
   </view>
-  <view class="seachbox">
-    <input placeholder="请输入菜名.." bindinput="inputhandler" /> 
+  <view class="searchbox">
+    <view class="searcharea">
+      <input placeholder="请输入菜名.." value="{{posttext}}" bindinput="inputhandler" />
+      <icon type="clear" size="20" class="clearicon" hidden="{{posttext == ''}}" bindtap="clearinput" />
+    </view> 
     <button class="btn" loading="{{loading}}" bindtap="postsearch">{{searchtext}}</button>
   </view>
   <view class="hot">

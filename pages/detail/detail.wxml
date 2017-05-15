@@ -12,7 +12,7 @@
     </view>
     <view class="layout content">
       <view class="h2"><text>营养知识</text></view>
-      <view class="p"><text>{{res.content}}</text></view>
+      <view class="p"><text>{{content}}</text></view>
     </view>
     <view class="layout material">
       <view class="h2"><text>用料</text></view>
